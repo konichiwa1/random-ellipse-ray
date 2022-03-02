@@ -85,14 +85,14 @@ class EllipseRay{
         // ctx.stroke();
 
         if(this.tracer.length > 1) {
-            ctx.strokeStyle = "blue";
+            ctx.strokeStyle = "#2ebae8";
             ctx.beginPath();
             ctx.moveTo(this.tracer[0].x, this.tracer[0].y);
 
             for(let i=1; i<this.tracer.length; i++) {
                 ctx.lineTo(this.tracer[i].x, this.tracer[i].y);
             }
-            ctx.lineWidth = "1";
+            ctx.lineWidth = "2";
             ctx.stroke();
         }
     }
