@@ -1,7 +1,7 @@
 const {sin, cos, atan2} = Math;
 
 class EllipseRay{
-    constructor({a, b, rayx, rayy, u, ctx, tracer, w, h}) {
+    constructor({a, b, rayx, rayy, u, ctx, tracer, w, h, color}) {
         this.rayx = rayx;
         this.rayy = rayy;
         this.a = a;
@@ -11,6 +11,7 @@ class EllipseRay{
         this.tracer = tracer;
         this.w = w;
         this.h = h;
+        this.color = color;
     }
 
     collided(x, y, a, b, dx, dy) {
@@ -85,7 +86,7 @@ class EllipseRay{
         // ctx.stroke();
 
         if(this.tracer.length > 1) {
-            ctx.strokeStyle = "#2ebae8";
+            ctx.strokeStyle = this.color;
             ctx.beginPath();
             ctx.moveTo(this.tracer[0].x, this.tracer[0].y);
 
